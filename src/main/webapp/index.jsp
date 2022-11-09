@@ -9,6 +9,7 @@
 	<h1>INDEX</h1>
 	<ol>
 		<li><a href="<%=request.getContextPath()%>/dept/deptList.jsp">부서 관리</a></li>
+		<li><a href="<%=request.getContextPath()%>/emp/empList.jsp">사원 관리</a></li>
 	</ol>
 </body>
 </html>

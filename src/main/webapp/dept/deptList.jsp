@@ -32,6 +32,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<!-- 메뉴 partial jsp 구성 -->
+	<div>
+		<jsp:include page="/inc/menu.jsp"></jsp:include>
+	</div>
+	
 	<h1>DEPT LIST</h1>
 	<div>
 		<a href="<%=request.getContextPath()%>/dept/insertDeptForm.jsp">부서추가</a>
@@ -49,7 +54,7 @@
 				<tr>
 					<td><%=d.deptNo%></td>
 					<td><%=d.deptName%></td>
-					<td><a href="">수정</a></td>
+					<td><a href="<%=request.getContextPath()%>/dept/updateDeptForm.jsp?deptNo=<%=d.deptNo%>">수정</a></td>
 					<td><a href="">삭제</a></td>
 				</tr>
 		<%	
