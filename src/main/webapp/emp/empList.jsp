@@ -30,6 +30,18 @@
 	}
 	
 	// 한페이지당 출력할 emp목록
+	/*
+		SELECT emp_no empNo, first_name firstName, last_name lastName 
+		FROM employees
+		WHERE first_name LIKE ? OR last_name LIKE ?
+		ORDER BY emp_no ASC LIMIT ?, ?
+				
+		empStmt.setString(1, "%"+word+""%");		
+		empStmt.setString(2, "%"+word+""%");
+		empStmt.setInt(3, rowPerPage * (currentPage - 1));
+		empStmt.setInt(4 , rowPerPage);		
+				
+	*/
 	String empSql = "SELECT emp_no empNo, first_name firstName, last_name lastName FROM employees ORDER BY emp_no ASC LIMIT ?, ?";
 	PreparedStatement empStmt = conn.prepareStatement(empSql);
 	empStmt.setInt(1, rowPerPage * (currentPage - 1));
